@@ -10,10 +10,20 @@ type Variables = {
 	};
 };
 
-const iamRoutes = new Hono<{ Variables: Variables }>().use("*", authMiddleware).get("/", async (c) => {
-	const user = c.get("user");
+const iamRoutes = new Hono<{ Variables: Variables }>()
+	.get("/test", async (c) => {
+		const user = {
+			id: "1",
+			email: "test@gmail.com",
+		};
 
-	return c.json({ user, allUsers: 0 });
-});
+		return c.json(user);
+	})
+	.use("*", authMiddleware)
+	.get("/", async (c) => {
+		const user = c.get("user");
+
+		return c.json({ user, allUsers: 0 });
+	});
 
 export default iamRoutes;
