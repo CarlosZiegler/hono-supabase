@@ -12,7 +12,7 @@ const serverSchema = z.object({
 	// Supabase
 	SUPABASE_URL: z.string().min(1),
 	SUPABASE_SERVICE_ROLE: z.string().min(1),
-	SENTRY_DSN: z.string().min(1).optional(),
+	SENTRY_DSN: z.string().optional(),
 });
 
 const _serverEnv = serverSchema.safeParse(process.env);
