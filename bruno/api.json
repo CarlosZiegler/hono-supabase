@@ -1,0 +1,111 @@
+{
+	"name": "api",
+	"version": "1",
+	"items": [
+		{
+			"type": "http",
+			"name": "iam",
+			"seq": 1,
+			"request": {
+				"url": "http://localhost:3000/api/iam",
+				"method": "GET",
+				"headers": [],
+				"body": {
+					"mode": "json",
+					"json": "{\n  \"email\":\"test@gmail.com\",\n  \"password\": \"Test123!\"\n}",
+					"formUrlEncoded": [],
+					"multipartForm": []
+				},
+				"auth": {
+					"mode": "none",
+					"basic": {
+						"username": "",
+						"password": ""
+					},
+					"bearer": {
+						"token": ""
+					}
+				},
+				"script": {},
+				"vars": {},
+				"assertions": [],
+				"tests": "",
+				"query": []
+			}
+		},
+		{
+			"type": "folder",
+			"name": "AUTH",
+			"items": [
+				{
+					"type": "http",
+					"name": "sign-in",
+					"seq": 1,
+					"request": {
+						"url": "http://localhost:3000/api/auth/sign-in",
+						"method": "POST",
+						"headers": [],
+						"body": {
+							"mode": "json",
+							"json": "{\n  \"email\":\"test@gmail.com@gmail.com\",\n  \"password\": \"Test123!\"\n}",
+							"formUrlEncoded": [],
+							"multipartForm": []
+						},
+						"auth": {
+							"mode": "none",
+							"basic": {
+								"username": "",
+								"password": ""
+							},
+							"bearer": {
+								"token": ""
+							}
+						},
+						"script": {},
+						"vars": {},
+						"assertions": [],
+						"tests": "",
+						"query": []
+					}
+				},
+				{
+					"type": "http",
+					"name": "sign-up",
+					"seq": 2,
+					"request": {
+						"url": "http://localhost:3000/api/auth/sign-up",
+						"method": "POST",
+						"headers": [],
+						"body": {
+							"mode": "json",
+							"json": "{\n  \"email\":\"test@gmail.com\",\n  \"password\": \"Test123!\"\n}",
+							"formUrlEncoded": [],
+							"multipartForm": []
+						},
+						"auth": {
+							"mode": "none",
+							"basic": {
+								"username": "",
+								"password": ""
+							},
+							"bearer": {
+								"token": ""
+							}
+						},
+						"script": {},
+						"vars": {},
+						"assertions": [],
+						"tests": "",
+						"query": []
+					}
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"variables": [],
+			"name": "local"
+		}
+	]
+}
