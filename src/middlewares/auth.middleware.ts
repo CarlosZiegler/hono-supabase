@@ -16,6 +16,7 @@ const authMiddleware: MiddlewareHandler = async (c, next) => {
 			updated_at: data.user.updated_at,
 		});
 	}
+	//TODO: handle error properly
 	if (error) {
 		console.error("Error while getting user by access_token ", error);
 		if (!refresh_token) {
