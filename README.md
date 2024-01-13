@@ -1,6 +1,6 @@
-HonosJS + Supabase Auth
+# HonosJS + Supabase Auth
 
-# Built With
+## Built With
 - Node.js
 - PNPM
 - TypeScript
@@ -11,7 +11,7 @@ HonosJS + Supabase Auth
 - Biome
 - Sentry
 
-# Getting Started
+## Getting Started
 
 ## Installation
 
